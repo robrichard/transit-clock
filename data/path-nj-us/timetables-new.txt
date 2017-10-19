@@ -1,0 +1,46 @@
+timetable_id,route_id,direction_id,start_date,end_date,monday,tuesday,wednesday,thursday,friday,saturday,sunday,route_label,service_notes,direction_label,orientation
+1,5744,,20170201,20190101,0,0,0,0,0,0,1,Blue Route,Before February 18th (Sunday only),,horizontal
+2,5744,,20170201,20190101,0,0,0,0,0,1,0,Blue Route,Before February 18th (Saturday only),,horizontal
+3,5744,,20170201,20190101,1,1,1,1,1,0,0,Blue Route,Before February 18th (Monday-Friday),,horizontal
+4,859,0,20170101,20170916,1,1,1,1,1,0,0,Hoboken - 33rd Street,Starting Jan 1 2017 (Monday-Friday),Outbound,horizontal
+5,859,1,20170101,20170916,1,1,1,1,1,0,0,Hoboken - 33rd Street,Starting Jan 1 2017 (Monday-Friday),Inbound,horizontal
+6,859,0,20170917,20181225,1,1,1,1,1,0,0,Hoboken - 33rd Street,STARTING SEPT 17 2017 (Monday-Friday),Outbound,horizontal
+7,859,1,20170917,20181225,1,1,1,1,1,0,0,Hoboken - 33rd Street,STARTING SEPT 17 2017 (Monday-Friday),Inbound,horizontal
+8,860,0,20170101,20170916,1,1,1,1,1,0,0,Hoboken - World Trade Center,Starting Jan 1 2017 (Monday-Friday),Outbound,horizontal
+9,860,1,20170101,20170916,1,1,1,1,1,0,0,Hoboken - World Trade Center,Starting Jan 1 2017 (Monday-Friday),Inbound,horizontal
+10,860,0,20170917,20181225,1,1,1,1,1,0,0,Hoboken - World Trade Center,STARTING SEPT 17 2017 (Monday-Friday),Outbound,horizontal
+11,860,1,20170917,20181225,1,1,1,1,1,0,0,Hoboken - World Trade Center,STARTING SEPT 17 2017 (Monday-Friday),Inbound,horizontal
+12,861,0,20170101,20170916,1,1,1,1,1,0,0,Journal Square - 33rd Street,Starting Jan 1 2017 (Monday-Friday),Outbound,horizontal
+13,861,1,20170101,20170916,1,1,1,1,1,0,0,Journal Square - 33rd Street,Starting Jan 1 2017 (Monday-Friday),Inbound,horizontal
+14,861,0,20170917,20181225,1,1,1,1,1,0,0,Journal Square - 33rd Street,STARTING SEPT 17 2017 (Monday-Friday),Outbound,horizontal
+15,861,1,20170917,20181225,1,1,1,1,1,0,0,Journal Square - 33rd Street,STARTING SEPT 17 2017 (Monday-Friday),Inbound,horizontal
+16,1024,0,20170101,20170916,0,0,0,0,0,0,1,Journal Square - 33rd Street (via Hoboken),Starting Jan 1 2017 (Sunday only),Outbound,horizontal
+17,1024,0,20170101,20170916,0,0,0,0,0,1,0,Journal Square - 33rd Street (via Hoboken),Starting Jan 1 2017 (Saturday only),Outbound,horizontal
+18,1024,0,20170101,20170916,1,1,1,1,1,0,0,Journal Square - 33rd Street (via Hoboken),Starting Jan 1 2017 (Monday-Friday),Outbound,horizontal
+19,1024,1,20170101,20170916,0,0,0,0,0,0,1,Journal Square - 33rd Street (via Hoboken),Starting Jan 1 2017 (Sunday only),Inbound,horizontal
+20,1024,1,20170101,20170916,0,0,0,0,0,1,0,Journal Square - 33rd Street (via Hoboken),Starting Jan 1 2017 (Saturday only),Inbound,horizontal
+21,1024,1,20170101,20170916,1,1,1,1,1,0,0,Journal Square - 33rd Street (via Hoboken),Starting Jan 1 2017 (Monday-Friday),Inbound,horizontal
+22,1024,0,20170917,20181225,0,0,0,0,0,0,1,Journal Square - 33rd Street (via Hoboken),STARTING SEPT 17 2017 (Sunday only),Outbound,horizontal
+23,1024,0,20170917,20181225,0,0,0,0,0,1,0,Journal Square - 33rd Street (via Hoboken),STARTING SEPT 17 2017 (Saturday only),Outbound,horizontal
+24,1024,0,20170917,20181225,1,1,1,1,1,0,0,Journal Square - 33rd Street (via Hoboken),STARTING SEPT 17 2017 (Monday-Friday),Outbound,horizontal
+25,1024,1,20170917,20181225,0,0,0,0,0,0,1,Journal Square - 33rd Street (via Hoboken),STARTING SEPT 17 2017 (Sunday only),Inbound,horizontal
+26,1024,1,20170917,20181225,0,0,0,0,0,1,0,Journal Square - 33rd Street (via Hoboken),STARTING SEPT 17 2017 (Saturday only),Inbound,horizontal
+27,1024,1,20170917,20181225,1,1,1,1,1,0,0,Journal Square - 33rd Street (via Hoboken),STARTING SEPT 17 2017 (Monday-Friday),Inbound,horizontal
+28,862,0,20170101,20170916,0,0,0,0,0,0,1,Newark - World Trade Center,Starting Jan 1 2017 (Sunday only),Outbound,horizontal
+29,862,0,20170101,20170916,0,0,0,0,0,1,0,Newark - World Trade Center,Starting Jan 1 2017 (Saturday only),Outbound,horizontal
+30,862,0,20170101,20170916,1,1,1,1,1,0,0,Newark - World Trade Center,Starting Jan 1 2017 (Monday-Friday),Outbound,horizontal
+31,862,1,20170101,20170916,0,0,0,0,0,0,1,Newark - World Trade Center,Starting Jan 1 2017 (Sunday only),Inbound,horizontal
+32,862,1,20170101,20170916,0,0,0,0,0,1,0,Newark - World Trade Center,Starting Jan 1 2017 (Saturday only),Inbound,horizontal
+33,862,1,20170101,20170916,1,1,1,1,1,0,0,Newark - World Trade Center,Starting Jan 1 2017 (Monday-Friday),Inbound,horizontal
+34,862,0,20170917,20181225,0,0,0,0,0,0,1,Newark - World Trade Center,STARTING SEPT 17 2017 (Sunday only),Outbound,horizontal
+35,862,0,20170917,20181225,0,0,0,0,0,1,0,Newark - World Trade Center,STARTING SEPT 17 2017 (Saturday only),Outbound,horizontal
+36,862,0,20170917,20181225,1,1,1,1,1,0,0,Newark - World Trade Center,STARTING SEPT 17 2017 (Monday-Friday),Outbound,horizontal
+37,862,1,20170917,20181225,0,0,0,0,0,0,1,Newark - World Trade Center,STARTING SEPT 17 2017 (Sunday only),Inbound,horizontal
+38,862,1,20170917,20181225,0,0,0,0,0,1,0,Newark - World Trade Center,STARTING SEPT 17 2017 (Saturday only),Inbound,horizontal
+39,862,1,20170917,20181225,1,1,1,1,1,0,0,Newark - World Trade Center,STARTING SEPT 17 2017 (Monday-Friday),Inbound,horizontal
+40,5746,,20170201,20190101,0,0,0,0,0,0,1,Purple Route,Before February 18th (Sunday only),,horizontal
+41,5746,,20170201,20190101,0,0,0,0,0,1,0,Purple Route,Before February 18th (Saturday only),,horizontal
+42,5746,,20170201,20190101,1,1,1,1,1,0,0,Purple Route,Before February 18th (Monday-Friday),,horizontal
+43,5745,,20170201,20190101,0,0,0,0,0,0,1,Red Route,Before February 18th (Sunday only),,horizontal
+44,5745,,20170201,20190101,0,0,0,0,0,1,0,Red Route,Before February 18th (Saturday only),,horizontal
+45,5745,,20170201,20190101,1,1,1,1,1,0,0,Red Route,Before February 18th (Monday-Friday),,horizontal

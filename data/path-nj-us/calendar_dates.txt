@@ -1,0 +1,25 @@
+service_id,date,holiday_name,exception_type
+c_3219_b_none_d_32,20181225,Christmas Day,1
+c_3219_b_none_d_32,20181122,Thanksgiving Day,1
+c_3219_b_none_d_32,20180903,Labor Day,1
+c_3219_b_none_d_32,20180704,Independence Day,1
+c_3219_b_none_d_32,20180528,Memorial Day,1
+c_3219_b_none_d_32,20180219,Presidents Day,1
+c_3219_b_none_d_32,20180101,New Year's Day,1
+c_3219_b_none_d_32,20171225,Christmas Day,1
+c_3219_b_none_d_32,20171123,Thanksgiving Day,1
+c_3219_b_2887_d_31,20181225,Christmas Day,2
+c_3219_b_2887_d_31,20181123,Day after Thanksgiving,2
+c_3219_b_2887_d_31,20181122,Thanksgiving Day,2
+c_3219_b_2887_d_31,20180903,Labor Day,2
+c_3219_b_2887_d_31,20180704,Independence Day,2
+c_3219_b_2887_d_31,20180528,Memorial Day,2
+c_3219_b_2887_d_31,20180219,Presidents Day,2
+c_3219_b_2887_d_31,20180115,"Martin Luther King,Jr. Day",2
+c_3219_b_2887_d_31,20180101,New Year's Day,2
+c_3219_b_2887_d_31,20171225,Christmas Day,2
+c_3219_b_2887_d_31,20171124,Day After Thanksgiving,2
+c_3219_b_2887_d_31,20171123,Thanksgiving Day,2
+c_2571_b_none_d_0,20181123,Day after Thanksgiving,1
+c_2571_b_none_d_0,20180115,"Martin Luther King,Jr. Day",1
+c_2571_b_none_d_0,20171124,Day After Thanksgiving,1

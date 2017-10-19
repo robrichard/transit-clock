@@ -1,0 +1,8 @@
+{
+  "name": "transit-clock",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:robrichard/transit-clock.git",
+  "author": "Rob Richard <rob@1stdibs.com>",
+  "license": "MIT"
+}

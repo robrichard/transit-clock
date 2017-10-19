@@ -1,0 +1,10 @@
+service_id,service_description
+c_2597_b_643_d_64,Before February 18th (Sunday only)
+c_2597_b_643_d_32,Before February 18th (Saturday only)
+c_2597_b_643_d_31,Before February 18th (Monday-Friday)
+c_3219_b_2887_d_64,STARTING SEPT 17 2017 (Sunday only)
+c_3219_b_2887_d_32,STARTING SEPT 17 2017 (Saturday only)
+c_3219_b_2887_d_31,STARTING SEPT 17 2017 (Monday-Friday)
+c_2553_b_805_d_64,Starting Jan 1 2017 (Sunday only)
+c_2553_b_805_d_32,Starting Jan 1 2017 (Saturday only)
+c_2553_b_805_d_31,Starting Jan 1 2017 (Monday-Friday)
