@@ -11,6 +11,7 @@
     "express-graphql": "^0.6.11",
     "graphql": "^0.11.7",
     "graphql-relay": "^0.5.3",
+    "moment": "^2.19.1",
     "transportation": "^1.2.16"
   }
 }

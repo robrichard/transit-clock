@@ -10,11 +10,20 @@ module.exports = new graphql.GraphQLSchema({
         fields: {
             agencies: {
                 type: new graphql.GraphQLList(Agency),
-                resolve: root => root.agencies.toArray()
+                resolve: root => root.transit.agencies.toArray()
             },
             stops: {
                 type: new graphql.GraphQLList(Stop),
-                resolve: root => root.stops.toArray()
+                args: {
+                    stopIds: {type: new graphql.GraphQLList(graphql.GraphQLString)}
+                },
+                resolve: (root, args) => {
+                    if (args.stopIds) {
+                        return args.stopIds.map(id => root.transit.stops[id]);
+                    } else {
+                        return root.transit.stops.toArray();
+                    }
+                }
             }
         }
     }),

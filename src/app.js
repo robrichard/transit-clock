@@ -3,12 +3,17 @@
 const express = require('express');
 const graphqlHTTP = require('express-graphql');
 const Schema = require('./schema/index');
-const getTransit = require('./getTransit');
+const getRootValue = require('./getRootValue');
+const {formatError} = require('graphql/')
 const app = express();
 
 app.use('/graphql', graphqlHTTP(async (request, response, graphQLParams) => ({
     schema: Schema,
-    rootValue: await getTransit(),
+    rootValue: await getRootValue(),
+    formatError: e => {
+        console.error(e);
+        return formatError(e);
+    },
     graphiql: true
 })));
 
