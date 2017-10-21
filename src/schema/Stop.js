@@ -3,11 +3,10 @@
 const graphql = require('graphql');
 
 module.exports = new graphql.GraphQLObjectType({
-    name: 'Agency',
+    name: 'Stop',
     fields: {
-        language: {type: graphql.GraphQLString},
         name: {type: graphql.GraphQLString},
-        timezone: {type: graphql.GraphQLString},
-        url: {type: graphql.GraphQLString},
+        lat: {type: graphql.GraphQLFloat},
+        lon: {type: graphql.GraphQLFloat}
     }
 });
