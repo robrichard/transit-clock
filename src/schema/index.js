@@ -3,7 +3,9 @@
 const graphql = require('graphql');
 const Agency = require('./Agency');
 const Stop = require('./Stop');
-const getDisplayBoard = require('./helpers/getDisplayBoard');
+const getStopTimes = require('./helpers/getStopTimes');
+const getMinutesAway = require('./helpers/getMinutesAway');
+const getShortHeadsign = require('./helpers/getShortHeadsign');
 
 module.exports = new graphql.GraphQLSchema({
     query: new graphql.GraphQLObjectType({
@@ -32,7 +34,32 @@ module.exports = new graphql.GraphQLSchema({
                     stopName: {type: new graphql.GraphQLNonNull(graphql.GraphQLString)}
                 },
                 resolve: (root, {stopName}) => {
-                    return getDisplayBoard(root, stopName);
+                    const stops = root.stopsByName[stopName];
+                    if (!stops) {
+                        throw new Error(`invalid stop name: ${stopName}`);
+                    }
+
+                    const items = [];
+                    for (const stop of stops) {
+                        const groupBy = {};
+                        for (const stopTime of getStopTimes(stop, root, {
+                            nextArriving: 3,
+                            isActive: true
+                        })) {
+                            const name = stopTime._list._trip.headsign;
+                            groupBy[name] = groupBy[name] || {
+                                name: getShortHeadsign(name),
+                                color: stopTime._list._trip.route.color,
+                                textColor: stopTime._list._trip.route.textColor,
+                                minutesAway: []
+                            };
+                            groupBy[name].minutesAway.push(Math.floor(getMinutesAway(stopTime)));
+                        }
+                        Object.keys(groupBy).forEach(name => {
+                            items.push(groupBy[name]);
+                        });
+                    }
+                    return {items};
                 }
             }
         }
