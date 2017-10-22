@@ -5,6 +5,7 @@ const Agency = require('./Agency');
 const Stop = require('./Stop');
 const getStopTimes = require('./helpers/getStopTimes');
 const getMinutesAway = require('./helpers/getMinutesAway');
+const getShortHeadsign = require('./helpers/getShortHeadsign');
 
 module.exports = new graphql.GraphQLSchema({
     query: new graphql.GraphQLObjectType({
@@ -47,7 +48,7 @@ module.exports = new graphql.GraphQLSchema({
                         })) {
                             const name = stopTime._list._trip.headsign;
                             groupBy[name] = groupBy[name] || {
-                                name,
+                                name: getShortHeadsign(name),
                                 color: stopTime._list._trip.route.color,
                                 textColor: stopTime._list._trip.route.textColor,
                                 minutesAway: []
