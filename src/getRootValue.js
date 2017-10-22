@@ -11,6 +11,7 @@ const promise = new Promise((resolve, reject) => {
             return;
         }
         const stopTimesByStopId = {};
+        const stopsByName = {};
 
         for (const agency of transit.agencies.toArray()) {
             for (const route of agency.routes.toArray()) {
@@ -22,9 +23,15 @@ const promise = new Promise((resolve, reject) => {
                 }
             }
         }
+        for (const stop of transit.stops.toArray()) {
+            stopsByName[stop.name] = stopsByName[stop.name] || [];
+            stopsByName[stop.name].push(stop);
+        }
+
         resolve({
             transit,
-            stopTimesByStopId
+            stopTimesByStopId,
+            stopsByName
         });
     });
 

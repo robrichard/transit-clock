@@ -22,7 +22,7 @@ module.exports = new graphql.GraphQLObjectType({
         stop: {type: Stop},
         trip: {
             type: require('./Trip'),
-            resolve: root => root._list._trip
+            resolve: root => root._list ? root._list._trip : null
         }
     })
 });

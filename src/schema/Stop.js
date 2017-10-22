@@ -1,8 +1,7 @@
 'use strict';
 
 const graphql = require('graphql');
-const getMinutesAway = require('./helpers/getMinutesAway');
-const isServiceActive = require('./helpers/isServiceActive');
+const getStopTimes = require('./helpers/getStopTimes');
 
 module.exports = new graphql.GraphQLObjectType({
     name: 'Stop',
@@ -16,21 +15,8 @@ module.exports = new graphql.GraphQLObjectType({
                 nextArriving: {type: graphql.GraphQLInt},
                 isActive: {type: graphql.GraphQLBoolean}
             },
-            resolve: (root, {nextArriving, isActive}, context, {rootValue}) => {
-                let stopTimes = rootValue.stopTimesByStopId[root.id];
-
-                if (isActive) {
-                    stopTimes = stopTimes.filter(s => isServiceActive(s._list._trip.service));
-                }
-
-                if (nextArriving) {
-                    stopTimes = stopTimes.sort((a, b) => {
-                        return getMinutesAway(a) - getMinutesAway(b);
-                    }).filter((e, i) => i < nextArriving);
-                }
-
-
-                return stopTimes;
+            resolve: (stop, args, context, {rootValue}) => {
+                return getStopTimes(stop, rootValue, args);
             }
         }
     })
