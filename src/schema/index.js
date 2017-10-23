@@ -46,9 +46,9 @@ module.exports = new graphql.GraphQLSchema({
                             nextArriving: 3,
                             isActive: true
                         })) {
-                            const name = stopTime._list._trip.headsign;
+                            const name = getShortHeadsign(stopTime._list._trip.headsign);
                             groupBy[name] = groupBy[name] || {
-                                name: getShortHeadsign(name),
+                                name: name,
                                 color: stopTime._list._trip.route.color,
                                 textColor: stopTime._list._trip.route.textColor,
                                 minutesAway: []

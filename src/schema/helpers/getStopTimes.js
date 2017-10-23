@@ -1,6 +1,7 @@
 'use strict';
 const getMinutesAway = require('./getMinutesAway');
 const isServiceActive = require('./isServiceActive');
+const getShortHeadsign = require('./getShortHeadsign');
 
 module.exports = function (stop, rootValue, {isActive, nextArriving}) {
     let stopTimes = rootValue.stopTimesByStopId[stop.id];
@@ -17,7 +18,7 @@ module.exports = function (stop, rootValue, {isActive, nextArriving}) {
         const groupBy = {};
         for (const stopTime of stopTimes) {
             if (stopTime._list) {
-                const name = stopTime._list._trip.headsign;
+                const name = getShortHeadsign(stopTime._list._trip.headsign);
                 groupBy[name] = groupBy[name] || [];
                 if (groupBy[name].length < nextArriving) {
                     groupBy[name].push(stopTime);
