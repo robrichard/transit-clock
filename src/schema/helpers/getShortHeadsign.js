@@ -6,7 +6,8 @@ const stopNameMap = new Map([
     ['Journal Square', 'JSQ'],
     ['World Trade Center', 'WTC'],
     ['Journal Square via Hoboken', 'JSQ'],
-    ['Newark', 'NWK']
+    ['Newark', 'NWK'],
+    ['Hoboken', 'Hoboken'],
 ]);
 
-module.exports = name => stopNameMap.get(name);
+module.exports = name => stopNameMap.get(name) || name;

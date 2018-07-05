@@ -46,14 +46,22 @@ module.exports = new graphql.GraphQLSchema({
                             nextArriving: 3,
                             isActive: true
                         })) {
+                            if (stopName === stopTime._list._trip.headsign) {
+                                // filter trips that end at the current station
+                                continue;
+                            }
                             const name = getShortHeadsign(stopTime._list._trip.headsign);
-                            groupBy[name] = groupBy[name] || {
-                                name: name,
-                                color: stopTime._list._trip.route.color,
-                                textColor: stopTime._list._trip.route.textColor,
-                                minutesAway: []
-                            };
-                            groupBy[name].minutesAway.push(Math.floor(getMinutesAway(stopTime)));
+                            const minutesAway = Math.floor(getMinutesAway(stopTime));
+                            if (minutesAway < 100) {
+                                groupBy[name] = groupBy[name] || {
+                                    name: name,
+                                    longName: stopTime._list._trip.headsign,
+                                    color: stopTime._list._trip.route.color,
+                                    textColor: stopTime._list._trip.route.textColor,
+                                    minutesAway: []
+                                };
+                                groupBy[name].minutesAway.push(minutesAway);
+                            }
                         }
                         Object.keys(groupBy).forEach(name => {
                             items.push(groupBy[name]);
